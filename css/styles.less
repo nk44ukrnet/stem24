@@ -1,0 +1,166 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@mobile: 768px;
+
+body {
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--black);
+  font-family: 'Montserrat', sans-serif;
+  @media (max-width: @mobile) {
+    font-size: 16px;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+:root {
+  --blue: #006FB9;
+  --light: #E6F8FE;
+  --white: #fff;
+  --black: #000;
+  --gap: 20px;
+}
+
+.padding-vertical {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+
+[class*=__container] {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+
+  &__container {
+    .padding-vertical();
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    @media (max-width: @mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+}
+
+.main {
+}
+
+.hero {
+  img {
+    .responsive();
+  }
+
+  h2 {
+    padding-top: var(--gap);
+    font-weight: 600;
+  }
+}
+
+.support {
+
+  &__container {
+  }
+
+  &__item {
+    .padding-vertical();
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    &:nth-child(even) {
+      background-color: var(--light);
+      padding: 20px;
+    }
+  }
+
+  &__image {
+    .responsive();
+  }
+
+  &__heading {
+  }
+
+  &__content {
+  }
+
+  &__donate {
+  }
+}
+
+.donate {
+
+  &__title {
+  }
+
+  &__holder {
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: var(--gap);
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--blue);
+    -webkit-transition: all .25s linear;-moz-transition: all .25s linear;-ms-transition: all .25s linear;-o-transition: all .25s linear;transition: all .25s linear;
+    border-radius: 15px;
+    &:hover {
+      opacity: .8;
+      color: var(--white);
+    }
+  }
+}
+
+.footer {
+  background-color: var(--blue);
+  color: var(--white);
+  .padding-vertical();
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: @mobile) {
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+

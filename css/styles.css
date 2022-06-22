@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--black);
+  font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+strong {
+  font-weight: 600;
+}
+:root {
+  --blue: #006FB9;
+  --light: #E6F8FE;
+  --white: #fff;
+  --black: #000;
+  --gap: 20px;
+}
+.padding-vertical {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+[class*=__container] {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.header__container {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.header h1 {
+  font-weight: 600;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero h2 {
+  padding-top: var(--gap);
+  font-weight: 600;
+}
+.support__item {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.support__item:nth-child(even) {
+  background-color: var(--light);
+  padding: 20px;
+}
+.support__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.donate__holder {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+.donate__item {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: var(--gap);
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--blue);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  border-radius: 15px;
+}
+.donate__item:hover {
+  opacity: 0.8;
+  color: var(--white);
+}
+.footer {
+  background-color: var(--blue);
+  color: var(--white);
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: var(--gap);
+  }
+}
+.footer__container p {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.footer__container a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer__container a:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=styles.css.map */
